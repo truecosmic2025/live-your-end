@@ -6,7 +6,7 @@ export const HowItWorks = () => {
   const steps = [
     {
       icon: FileQuestion,
-      title: "Answer 3 quick questions",
+      title: "Answer some quick questions",
       description: "Your aim, biggest sticking point, preferred outcome"
     },
     {
