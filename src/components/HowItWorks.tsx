@@ -5,14 +5,14 @@ import { Calendar, FileQuestion, Mail, Video } from "lucide-react";
 export const HowItWorks = () => {
   const steps = [
     {
-      icon: Calendar,
-      title: "Pick a time with Robert",
-      description: "Choose a convenient slot from our calendar"
-    },
-    {
       icon: FileQuestion,
       title: "Answer 3 quick questions",
       description: "Your aim, biggest sticking point, preferred outcome"
+    },
+    {
+      icon: Calendar,
+      title: "Pick a time with Robert",
+      description: "Choose a convenient slot from our calendar"
     },
     {
       icon: Mail,
