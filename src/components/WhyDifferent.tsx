@@ -1,6 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Zap, Clock, Ban, Lightbulb } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const WhyDifferent = () => {
   const differences = [
@@ -25,10 +26,6 @@ export const WhyDifferent = () => {
       description: "Most clients report the feeling of \"Oh, I finally know exactly what to do.\""
     }
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4">
@@ -62,7 +59,7 @@ export const WhyDifferent = () => {
         </div>
 
         <div className="text-center">
-          <CTAButton variant="primary" onClick={scrollToBooking} className="inline-flex">
+          <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
             Get Your Personal Plan — Free
           </CTAButton>
         </div>

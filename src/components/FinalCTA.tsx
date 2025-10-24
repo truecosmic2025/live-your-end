@@ -1,11 +1,9 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Sparkles } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const FinalCTA = () => {
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4">
@@ -33,7 +31,7 @@ export const FinalCTA = () => {
               and leave with a 7-day <strong>Live in the End</strong> plan you can start tonight.
             </p>
 
-            <CTAButton variant="primary" onClick={scrollToBooking} className="inline-flex">
+            <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
               Book Your Free 1:1 with Robert
             </CTAButton>
           </div>

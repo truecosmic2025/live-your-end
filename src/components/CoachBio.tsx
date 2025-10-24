@@ -2,6 +2,7 @@ import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { CheckCircle } from "lucide-react";
 import robertMeadeImage from "@/assets/robert-meade.jpg";
+import { openChatbot } from "@/lib/chatbot";
 
 export const CoachBio = () => {
   const coachingPoints = [
@@ -9,10 +10,6 @@ export const CoachBio = () => {
     { label: "Gentle correction", description: "we fine-tune inner speech and state without shame" },
     { label: "Results-minded", description: "you'll leave with a plan that fits real life" }
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4">
@@ -67,7 +64,7 @@ export const CoachBio = () => {
                 <p className="text-sm text-primary mt-3 font-semibold">— Neville Goddard</p>
               </div>
 
-              <CTAButton variant="primary" onClick={scrollToBooking} className="w-full">
+              <CTAButton variant="primary" onClick={openChatbot} className="w-full">
                 Book with Robert — Free 30 Minutes
               </CTAButton>
             </div>

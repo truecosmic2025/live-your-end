@@ -1,6 +1,8 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Target, Image, Moon, MessageSquare, RotateCcw } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
+
 export const Mechanism = () => {
   const steps = [{
     icon: Target,
@@ -23,11 +25,6 @@ export const Mechanism = () => {
     title: "Revision",
     description: "Re-assign meaning to wobble moments."
   }];
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
   return <section className="py-20 px-4">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-12 animate-fade-in">
@@ -58,7 +55,7 @@ export const Mechanism = () => {
             <strong>Result:</strong> A daily rhythm that <span className="text-primary font-semibold">stabilises state</span>, 
             so behaviour and opportunities naturally align.
           </p>
-          <CTAButton variant="primary" onClick={scrollToBooking}>
+          <CTAButton variant="primary" onClick={openChatbot}>
             Get Your Personal Plan — Free
           </CTAButton>
         </GlassCard>

@@ -1,6 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Calendar, FileQuestion, Mail, Video } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const HowItWorks = () => {
   const steps = [
@@ -66,7 +67,7 @@ export const HowItWorks = () => {
         </div>
 
         <div className="text-center">
-          <CTAButton variant="primary" onClick={scrollToBooking} className="inline-flex">
+          <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
             Book Your Free 1:1 Session
           </CTAButton>
         </div>

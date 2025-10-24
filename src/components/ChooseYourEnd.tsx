@@ -1,6 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Heart, DollarSign, Smile } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const ChooseYourEnd = () => {
   const focuses = [
@@ -23,10 +24,6 @@ export const ChooseYourEnd = () => {
       color: "text-secondary"
     }
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4">
@@ -59,7 +56,7 @@ export const ChooseYourEnd = () => {
         </div>
 
         <div className="text-center">
-          <CTAButton variant="primary" onClick={scrollToBooking} className="inline-flex">
+          <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
             Start with a Free 1:1
           </CTAButton>
         </div>

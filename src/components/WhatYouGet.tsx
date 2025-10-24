@@ -1,6 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Clock, Lightbulb, Calendar, CheckSquare, FileText, Headphones } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const WhatYouGet = () => {
   const duringCall = [
@@ -14,10 +15,6 @@ export const WhatYouGet = () => {
     { icon: FileText, title: "One-page plan (PDF)", description: "with your exact scene, prompts, and schedule" },
     { icon: Headphones, title: "Neville Daily Practice Kit", description: "PDF + 1 audio to keep you consistent" }
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4">
@@ -75,7 +72,7 @@ export const WhatYouGet = () => {
         </GlassCard>
 
         <div className="text-center">
-          <CTAButton variant="primary" onClick={scrollToBooking} className="inline-flex">
+          <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
             Claim Your Free Consultation
           </CTAButton>
         </div>

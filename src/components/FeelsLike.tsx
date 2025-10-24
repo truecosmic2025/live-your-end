@@ -1,6 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { CheckCircle } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const FeelsLike = () => {
   const feelings = [
@@ -21,10 +22,6 @@ export const FeelsLike = () => {
       description: "quieter self-talk, easier action, less checking"
     }
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4 relative overflow-hidden">
@@ -53,7 +50,7 @@ export const FeelsLike = () => {
         </GlassCard>
 
         <div className="text-center">
-          <CTAButton variant="primary" onClick={scrollToBooking} className="inline-flex">
+          <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
             Experience It Tonight — Book Free
           </CTAButton>
         </div>

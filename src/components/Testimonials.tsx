@@ -1,6 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Star } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -20,10 +21,6 @@ export const Testimonials = () => {
       rating: 5
     }
   ];
-
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="py-20 px-4">
@@ -56,7 +53,7 @@ export const Testimonials = () => {
         </div>
 
         <div className="text-center">
-          <CTAButton variant="secondary" onClick={scrollToBooking} className="inline-flex">
+          <CTAButton variant="secondary" onClick={openChatbot} className="inline-flex">
             Book Now — Limited Spots This Week
           </CTAButton>
         </div>

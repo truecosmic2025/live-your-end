@@ -1,12 +1,9 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Sparkles, CheckCircle } from "lucide-react";
+import { openChatbot } from "@/lib/chatbot";
+
 export const Hero = () => {
-  const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
   return <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
       <div className="container max-w-6xl mx-auto relative z-10 text-center">
         <div className="mb-6 flex justify-center animate-fade-in">
@@ -50,10 +47,10 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
-          <CTAButton variant="primary" onClick={scrollToBooking} className="min-w-[280px]">
+          <CTAButton variant="primary" onClick={openChatbot} className="min-w-[280px]">
             Book Your Free 1:1 Session
           </CTAButton>
-          <CTAButton variant="glass" className="min-w-[280px]">
+          <CTAButton variant="glass" onClick={openChatbot} className="min-w-[280px]">
             Watch Preview
           </CTAButton>
         </div>
