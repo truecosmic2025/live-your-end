@@ -1,14 +1,13 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Sparkles, CheckCircle } from "lucide-react";
-
 export const Hero = () => {
   const scrollToBooking = () => {
-    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('book')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
       <div className="container max-w-6xl mx-auto relative z-10 text-center">
         <div className="mb-6 flex justify-center animate-fade-in">
           <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full">
@@ -23,13 +22,17 @@ export const Hero = () => {
           <br />— Starting Tonight
         </h1>
 
-        <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{
+        animationDelay: '0.1s'
+      }}>
           Book a <strong className="text-primary">free 30‑minute 1:1 consultation</strong> with Truecosmic's imagination coach{" "}
           <strong className="text-foreground">Robert Meade</strong>. In one focused session, you'll define your aim, craft a Neville‑style{" "}
-          <strong className="text-foreground">Live in the End</strong> scene, and leave with a <strong className="text-foreground">7‑day plan</strong> you can actually follow.
+          <strong className="text-foreground">clear plan</strong> scene, and leave with a <strong className="text-foreground">7‑day plan</strong> you can actually follow.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-10 text-sm animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-10 text-sm animate-fade-in-up" style={{
+        animationDelay: '0.2s'
+      }}>
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary" />
             <span>1,000+ Students Transformed</span>
@@ -44,7 +47,9 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up" style={{
+        animationDelay: '0.3s'
+      }}>
           <CTAButton variant="primary" onClick={scrollToBooking} className="min-w-[280px]">
             Book Your Free 1:1 Session
           </CTAButton>
@@ -53,7 +58,9 @@ export const Hero = () => {
           </CTAButton>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-foreground/70 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-foreground/70 animate-fade-in-up" style={{
+        animationDelay: '0.4s'
+      }}>
           <div className="flex items-center gap-1">
             <CheckCircle className="w-4 h-4 text-primary" />
             <span>Instant Access</span>
@@ -73,7 +80,8 @@ export const Hero = () => {
 
       {/* Cosmic floating orbs */}
       <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float opacity-50" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float opacity-50" style={{ animationDelay: '2s' }} />
-    </section>
-  );
+      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float opacity-50" style={{
+      animationDelay: '2s'
+    }} />
+    </section>;
 };
