@@ -78,7 +78,7 @@ export const BookingSection = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105 shadow-lg shadow-primary/20"
+                className="w-full px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold cosmic-glow-hover transition-all"
               >
                 Request Your Free Session
               </button>

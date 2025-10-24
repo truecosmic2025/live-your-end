@@ -15,18 +15,28 @@ export const CoachBio = () => {
 
   return (
     <section className="py-20 px-4">
-      <div className="container max-w-5xl mx-auto">
-        <GlassCard className="p-8 md:p-12 animate-fade-in">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div className="container max-w-6xl mx-auto">
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+            Meet Your Guide
+          </h2>
+          <h3 className="text-3xl md:text-4xl font-display mb-2">
+            Learn from <span className="text-primary">Robert Meade</span>
+          </h3>
+        </div>
+
+        <GlassCard className="p-8 md:p-12 animate-fade-in-up">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Coach Image */}
             <div className="relative">
-              <div className="aspect-square rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl shadow-primary/20 mx-auto max-w-sm">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+              <div className="aspect-square rounded-2xl overflow-hidden border border-primary/30 shadow-2xl mx-auto max-w-sm cosmic-glow">
+                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/30 flex items-center justify-center">
+                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center border border-primary/40">
                       <span className="text-6xl">👤</span>
                     </div>
                     <p className="text-sm text-foreground/60">Robert Meade</p>
+                    <p className="text-xs text-primary">Manifestation Expert</p>
                   </div>
                 </div>
               </div>
@@ -34,34 +44,30 @@ export const CoachBio = () => {
 
             {/* Bio Content */}
             <div>
-              <h2 className="text-4xl font-display font-bold mb-6">
-                Meet Your Coach — <span className="text-gradient">Robert Meade</span>
-              </h2>
-              
-              <p className="text-lg text-foreground/90 mb-6">
+              <p className="text-lg text-foreground/90 mb-6 leading-relaxed">
                 I'm Robert, an imagination coach at Truecosmic Academy. My specialty is translating Neville Goddard's{" "}
                 <strong className="text-primary">Live in the End</strong> into a simple, daily practice you can start{" "}
-                <strong>tonight</strong>.
+                <strong className="text-foreground">tonight</strong>.
               </p>
 
               <div className="space-y-4 mb-8">
-                <h3 className="text-xl font-semibold mb-3">How I coach:</h3>
+                <h4 className="text-xl font-semibold mb-4 text-primary">How I coach:</h4>
                 {coachingPoints.map((point, index) => (
-                  <div key={index} className="flex gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <div key={index} className="flex gap-3 glass-card p-4 rounded-lg">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-primary">{point.label}:</span>{" "}
-                      <span className="text-foreground/80">{point.description}</span>
+                      <span className="font-semibold text-foreground">{point.label}:</span>{" "}
+                      <span className="text-foreground/70">{point.description}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="glass-card p-6 mb-8 border-l-4 border-secondary">
-                <p className="italic text-foreground/90">
+              <div className="glass-card p-6 mb-8 border-l-4 border-primary rounded-lg">
+                <p className="italic text-foreground/90 text-lg">
                   "Assume the feeling of the wish fulfilled and continue feeling it is fulfilled until that which you feel objectifies itself."
                 </p>
-                <p className="text-sm text-foreground/70 mt-2">— Neville Goddard</p>
+                <p className="text-sm text-primary mt-3 font-semibold">— Neville Goddard</p>
               </div>
 
               <CTAButton variant="primary" onClick={scrollToBooking} className="w-full">
