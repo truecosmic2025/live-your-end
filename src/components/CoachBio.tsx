@@ -1,7 +1,6 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { CheckCircle } from "lucide-react";
-import robertMeadeImage from "@/assets/robert-meade.jpg";
 
 export const CoachBio = () => {
   const coachingPoints = [
@@ -31,11 +30,15 @@ export const CoachBio = () => {
             {/* Coach Image */}
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden border border-primary/30 shadow-2xl mx-auto max-w-sm cosmic-glow">
-                <img 
-                  src={robertMeadeImage} 
-                  alt="Robert Meade - Manifestation Expert and Imagination Coach"
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center border border-primary/40">
+                      <span className="text-6xl">👤</span>
+                    </div>
+                    <p className="text-sm text-foreground/60">Robert Meade</p>
+                    <p className="text-xs text-primary">Manifestation Expert</p>
+                  </div>
+                </div>
               </div>
             </div>
 
