@@ -7,7 +7,7 @@ export const HowItWorks = () => {
     {
       icon: FileQuestion,
       title: "Answer some quick questions",
-      description: "You'll get a confirmation email with the Zoom join info."
+      description: "Your aim, biggest sticking point, preferred outcome"
     },
     {
       icon: Calendar,
@@ -17,7 +17,7 @@ export const HowItWorks = () => {
     {
       icon: Mail,
       title: "Check your email for prep",
-      description: "3-minute welcome video and your intake sheet"
+      description: "You'll get a confirmation email with the Zoom join info."
     },
     {
       icon: Video,
