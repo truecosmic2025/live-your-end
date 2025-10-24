@@ -22,7 +22,7 @@ export const HowItWorks = () => {
     {
       icon: Video,
       title: "We meet on Zoom/phone",
-      description: "You leave with your one-page plan"
+      description: "You'll leave with a clear plan"
     }
   ];
 
