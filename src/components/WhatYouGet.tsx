@@ -8,7 +8,7 @@ export const WhatYouGet = () => {
     { icon: Clock, title: "Snap Assessment", time: "5 min", description: "your aim, your current state, and the one bottleneck" },
     { icon: Lightbulb, title: "One recommended technique", time: "10 min", description: "SATS/Revision/Inner Speech/Scripting we'll find your best fit" },
     { icon: Calendar, title: "Your Action Outline", time: "10 min", description: "What to do first, which technique to focus on, and how to keep momentum" },
-    { icon: Award, title: "Coach Recommendation", time: "5 min", description: "A clear suggestion of the best-fit coaching path for your goal (why it fits, what it covers)." }
+    { icon: Award, title: "Coach Recommendation", time: "5 min", description: "A clear suggestion of the best-fit consultation path for your goal (why it fits, what it covers)." }
   ];
 
   const afterCall = [
