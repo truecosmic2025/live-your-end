@@ -9,38 +9,46 @@ export const openChatbot = () => {
     try { (window as any).botpenguin?.show?.(); } catch {}
   };
 
+  const tryPostMessage = () => {
+    const iframes = Array.from(
+      document.querySelectorAll('iframe[src*="window-"], iframe[src*="botpenguin"]')
+    ) as HTMLIFrameElement[];
+    let sent = false;
+    for (const iframe of iframes) {
+      const win = iframe.contentWindow;
+      if (win) {
+        try {
+          win.postMessage({ type: 'OPEN', source: 'parent' }, '*');
+          win.postMessage({ type: 'open' }, '*');
+          win.postMessage('OPEN', '*');
+          win.postMessage({ action: 'OPEN_WIDGET' }, '*');
+          sent = true;
+        } catch {}
+      }
+    }
+    return sent;
+  };
+
   const tryClickLauncher = () => {
     const selectors = [
-      '#BotPenguin-messenger-root + div button',
       '.bp-widget-btn',
       '.bp-launcher',
-      '[class*="botpenguin"][role="button"]',
       'button[aria-label*="chat"]',
       'button[title*="chat"]',
-      'div[id*="botpenguin"][role="button"]',
-      '[id*="messenger-widget"]',
+      '[class*="botpenguin"][role="button"]',
+      'div[role="button"][class*="launcher"]',
     ];
     for (const sel of selectors) {
       const el = document.querySelector(sel) as HTMLElement | null;
       if (el) {
         console.log('Opening chatbot via selector:', sel);
         el.click();
+        el.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+        el.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
         return true;
       }
     }
-    const candidates = Array.from(
-      document.querySelectorAll(
-        '[id*="botpenguin"], [class*="botpenguin"], [id*="messenger"], [class*="messenger"]'
-      )
-    ) as HTMLElement[];
-    const launcher = candidates.find(
-      (e) => typeof e.click === 'function' && getComputedStyle(e).position === 'fixed'
-    );
-    if (launcher) {
-      console.log('Opening chatbot via fixed candidate');
-      launcher.click();
-      return true;
-    }
+    // Avoid clicking the script tag
     return false;
   };
 
@@ -62,7 +70,9 @@ export const openChatbot = () => {
   tryAPIs();
   const timer = setInterval(() => {
     tryAPIs();
-    if (tryClickLauncher()) {
+    const clicked = tryClickLauncher();
+    const posted = tryPostMessage();
+    if (clicked || posted) {
       clearInterval(timer);
     } else if (Date.now() - start > maxMs) {
       clearInterval(timer);
