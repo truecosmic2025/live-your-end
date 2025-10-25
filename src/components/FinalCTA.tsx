@@ -6,9 +6,9 @@ import { openChatbot } from "@/lib/chatbot";
 export const FinalCTA = () => {
 
   return (
-    <section className="py-20 px-4">
-      <div className="container max-w-4xl mx-auto">
-        <GlassCard className="p-12 text-center animate-fade-in relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4">
+      <div className="container max-w-4xl mx-auto w-full">
+        <GlassCard className="p-6 md:p-12 text-center animate-fade-in relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-10 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
@@ -31,7 +31,7 @@ export const FinalCTA = () => {
               and leave with a personalised action plan you can start tonight.
             </p>
 
-            <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
+            <CTAButton variant="primary" onClick={openChatbot} className="inline-flex max-w-full">
               Book Your Free 1:1 with Robert
             </CTAButton>
           </div>

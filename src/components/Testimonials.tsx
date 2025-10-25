@@ -23,8 +23,8 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
-      <div className="container max-w-6xl mx-auto">
+    <section className="py-12 md:py-20 px-4">
+      <div className="container max-w-6xl mx-auto w-full">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             <span className="text-gradient">Real Results</span>
@@ -52,8 +52,8 @@ export const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <CTAButton variant="secondary" onClick={openChatbot} className="inline-flex">
+        <div className="text-center px-4">
+          <CTAButton variant="secondary" onClick={openChatbot} className="inline-flex max-w-full">
             Book Now — Limited Spots This Week
           </CTAButton>
         </div>

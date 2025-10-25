@@ -22,11 +22,11 @@ export const ProblemPromise = () => {
   };
 
   return (
-    <section className="py-20 px-4">
-      <div className="container max-w-6xl mx-auto">
+    <section className="py-12 md:py-20 px-4">
+      <div className="container max-w-6xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Problem Side */}
-          <GlassCard className="p-8 animate-fade-in">
+          <GlassCard className="p-4 md:p-8 animate-fade-in">
             <h2 className="text-3xl font-display font-bold mb-6 text-secondary">Is this you?</h2>
             <ul className="space-y-4">
               {problems.map((problem, index) => (
@@ -39,7 +39,7 @@ export const ProblemPromise = () => {
           </GlassCard>
 
           {/* Promise Side */}
-          <GlassCard className="p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <GlassCard className="p-4 md:p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-3xl font-display font-bold mb-6 text-primary">What changes here:</h2>
             <ul className="space-y-4 mb-8">
               {promises.map((promise, index) => (
