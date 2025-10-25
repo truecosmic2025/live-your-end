@@ -12,8 +12,8 @@ export const CoachBio = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
-      <div className="container max-w-6xl mx-auto">
+    <section className="py-12 md:py-20 px-4">
+      <div className="container max-w-6xl mx-auto w-full">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Meet Your Guide
@@ -23,8 +23,8 @@ export const CoachBio = () => {
           </h3>
         </div>
 
-        <GlassCard className="p-8 md:p-12 animate-fade-in-up">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <GlassCard className="p-4 md:p-8 lg:p-12 animate-fade-in-up">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Coach Image */}
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden border border-primary/30 shadow-2xl mx-auto max-w-sm cosmic-glow">
@@ -64,7 +64,7 @@ export const CoachBio = () => {
                 <p className="text-sm text-primary mt-3 font-semibold">— Neville Goddard</p>
               </div>
 
-              <CTAButton variant="primary" onClick={openChatbot} className="w-full">
+              <CTAButton variant="primary" onClick={openChatbot} className="w-full text-sm md:text-base">
                 Book with Robert — Free 30 Minutes
               </CTAButton>
             </div>
