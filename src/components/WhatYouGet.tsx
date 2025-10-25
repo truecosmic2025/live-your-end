@@ -42,8 +42,8 @@ export const WhatYouGet = () => {
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="text-sm font-semibold text-secondary mb-1">{item.time}</div>
-                  <h4 className="font-semibold mb-2 text-sm">{item.title}</h4>
-                  <p className="text-xs text-foreground/70">{item.description}</p>
+                  <h4 className="font-semibold mb-2 text-lg">{item.title}</h4>
+                  <p className="text-sm text-foreground/70">{item.description}</p>
                 </GlassCard>
               );
             })}
