@@ -6,7 +6,7 @@ import { openChatbot } from "@/lib/chatbot";
 export const WhatYouGet = () => {
   const duringCall = [
     { icon: Clock, title: "Snap Assessment", time: "5 min", description: "your aim, your current state, and the one bottleneck" },
-    { icon: Lightbulb, title: "One recommended technique to start with (SATS / Revision / Inner Speech)", time: "10 min", description: "we co-create a short Live in the End scene (sensory + naturalness)" },
+    { icon: Lightbulb, title: "One recommended technique to start with (SATS / Revision / Inner Speech)", time: "10 min", description: "SATS/Revision/Inner Speech/Scripting we'll find your best fit" },
     { icon: Calendar, title: "Your 7-Day Routine", time: "10 min", description: "bedtime SATS, daytime inner speech swaps, and mini revision" },
     { icon: CheckSquare, title: "Checkpoints", time: "5 min", description: "how you'll know it's working, and what to tweak" }
   ];
