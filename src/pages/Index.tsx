@@ -13,6 +13,7 @@ import { BookingSection } from "@/components/BookingSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Ethos } from "@/components/Ethos";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 
 const Index = () => {
   return (
@@ -32,6 +33,7 @@ const Index = () => {
       <FinalCTA />
       <Ethos />
       <Footer />
+      <BackToTop />
     </div>
   );
 };
