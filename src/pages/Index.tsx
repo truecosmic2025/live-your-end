@@ -17,7 +17,7 @@ import { BackToTop } from "@/components/BackToTop";
 
 const Index = () => {
   return (
-    <div className="grain relative">
+    <div className="grain relative overflow-x-hidden w-full">
       <Hero />
       <ProblemPromise />
       <Mechanism />

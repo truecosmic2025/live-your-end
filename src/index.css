@@ -50,13 +50,18 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     background: radial-gradient(ellipse at top, hsl(240 40% 15%), hsl(240 28% 8%)), 
                 radial-gradient(ellipse at bottom, hsl(280 60% 15%), transparent);
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
   }
 
   body::before {

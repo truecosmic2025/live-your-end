@@ -76,8 +76,8 @@ export const Hero = () => {
       </div>
 
       {/* Cosmic floating orbs */}
-      <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float opacity-50" />
-      <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float opacity-50" style={{
+      <div className="absolute top-1/4 left-0 md:left-10 w-48 md:w-64 h-48 md:h-64 bg-primary/20 rounded-full blur-3xl animate-float opacity-50 -translate-x-1/2" />
+      <div className="absolute bottom-1/4 right-0 md:right-10 w-64 md:w-80 h-64 md:h-80 bg-secondary/20 rounded-full blur-3xl animate-float opacity-50 translate-x-1/2" style={{
       animationDelay: '2s'
     }} />
     </section>;
