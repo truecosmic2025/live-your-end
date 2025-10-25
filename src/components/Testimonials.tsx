@@ -12,12 +12,12 @@ export const Testimonials = () => {
     },
     {
       quote: "Robert caught a tiny phrase I kept repeating. Changing that inner line changed my week.",
-      author: "Client B",
+      author: "Cecil J",
       rating: 5
     },
     {
       quote: "I stopped waiting for signs. Living in the end made me act from the end.",
-      author: "Client C",
+      author: "Izabelle D",
       rating: 5
     }
   ];
