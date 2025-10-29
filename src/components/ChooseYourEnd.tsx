@@ -2,6 +2,9 @@ import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Heart, DollarSign, Smile } from "lucide-react";
 import { openChatbot } from "@/lib/chatbot";
+import useCaseLove from "@/assets/use-case-love.jpg";
+import useCaseCareer from "@/assets/use-case-career.jpg";
+import useCasePeace from "@/assets/use-case-peace.jpg";
 
 export const ChooseYourEnd = () => {
   const focuses = [
@@ -9,19 +12,22 @@ export const ChooseYourEnd = () => {
       icon: Heart,
       title: "Love & Relationships",
       description: "Rekindle a connection or deepen the bond. We'll script a scene that feels like normal life after it's done—then rehearse it nightly.",
-      color: "text-pink-400"
+      color: "text-pink-400",
+      image: useCaseLove
     },
     {
       icon: DollarSign,
       title: "Money & Career",
       description: "Stabilise identity around being chosen, paid, or promoted. We'll align inner speech with an identity that quietly expects the outcome.",
-      color: "text-primary"
+      color: "text-primary",
+      image: useCaseCareer
     },
     {
       icon: Smile,
       title: "Peace & Confidence",
       description: "Less spiralling, more centred presence. We'll build a scene that proves to your nervous system: \"This is who I am now.\"",
-      color: "text-secondary"
+      color: "text-secondary",
+      image: useCasePeace
     }
   ];
 
@@ -42,14 +48,24 @@ export const ChooseYourEnd = () => {
               <GlassCard 
                 key={index}
                 hover
-                className="p-8 text-center animate-fade-in-up"
+                className="overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                  <Icon className={`w-10 h-10 ${focus.color}`} />
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={focus.image} 
+                    alt={focus.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 to-background/20" />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center border-2 border-primary/20">
+                    <Icon className={`w-8 h-8 ${focus.color}`} />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{focus.title}</h3>
-                <p className="text-foreground/80">{focus.description}</p>
+                <div className="p-6 text-center">
+                  <h3 className="text-2xl font-bold mb-3">{focus.title}</h3>
+                  <p className="text-foreground/80">{focus.description}</p>
+                </div>
               </GlassCard>
             );
           })}

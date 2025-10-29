@@ -2,23 +2,29 @@ import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Star } from "lucide-react";
 import { openChatbot } from "@/lib/chatbot";
+import testimonialAlison from "@/assets/testimonial-alison.jpg";
+import testimonialCecil from "@/assets/testimonial-cecil.jpg";
+import testimonialIzabelle from "@/assets/testimonial-izabelle.jpg";
 
 export const Testimonials = () => {
   const testimonials = [
     {
       quote: "I finally had one clear plan instead of a dozen hacks. The nightly scene became the calmest part of my day.",
       author: "Alison J",
-      rating: 5
+      rating: 5,
+      avatar: testimonialAlison
     },
     {
       quote: "Robert caught a tiny phrase I kept repeating. Changing that inner line changed my week.",
       author: "Cecil J",
-      rating: 5
+      rating: 5,
+      avatar: testimonialCecil
     },
     {
       quote: "I stopped waiting for signs. Living in the end made me act from the end.",
       author: "Izabelle D",
-      rating: 5
+      rating: 5,
+      avatar: testimonialIzabelle
     }
   ];
 
@@ -39,15 +45,24 @@ export const Testimonials = () => {
               className="p-6 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                ))}
+              <div className="flex items-center gap-4 mb-4">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.author}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
+                />
+                <div className="flex-1">
+                  <div className="flex gap-1 mb-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <cite className="text-sm text-foreground/90 not-italic font-medium">{testimonial.author}</cite>
+                </div>
               </div>
-              <blockquote className="text-foreground/90 mb-4 italic">
+              <blockquote className="text-foreground/80 italic">
                 "{testimonial.quote}"
               </blockquote>
-              <cite className="text-sm text-foreground/70 not-italic">— {testimonial.author}</cite>
             </GlassCard>
           ))}
         </div>
