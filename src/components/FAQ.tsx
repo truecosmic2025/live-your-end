@@ -26,7 +26,7 @@ export const FAQ = () => {
     },
     {
       question: "Is this therapy?",
-      answer: "No. This is coaching on imagination practices and inner self-talk."
+      answer: "No. This is a 1:1 consultation to find out what's holding you back."
     },
     {
       question: "What should I prepare?",
