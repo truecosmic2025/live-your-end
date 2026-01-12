@@ -56,7 +56,7 @@ export const Mechanism = () => {
             so behaviour and opportunities naturally align.
           </p>
           <CTAButton variant="primary" onClick={openChatbot}>
-            Get Your Personal Plan — Free
+            Book Your Consultation
           </CTAButton>
         </GlassCard>
       </div>
