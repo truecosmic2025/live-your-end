@@ -35,9 +35,8 @@ export const Hero = () => {
         <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{
         animationDelay: '0.1s'
       }}>
-          Book a <strong className="text-primary">free 30‑minute 1:1 consultation</strong> with Truecosmic's imagination coach{" "}
-          <strong className="text-foreground">Robert Meade</strong>. In one focused session, you'll define your aim, craft a Neville‑style{" "}
-          <strong className="text-foreground">clear plan</strong> scene, and leave with a <strong className="text-foreground">7‑day plan</strong> you can actually follow.
+          Book a <strong className="text-primary">free 30‑minute 1:1 consultation</strong> with Truecosmic's imagination coach,{" "}
+          <strong className="text-foreground">Robert Meade</strong>. In one focused session, you'll identify what's been blocking your progress, get clear on what you actually want, and leave with your next best step—And if you want momentum with guidance, we'll discuss the best way to support you moving forward.
         </p>
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-10 text-sm animate-fade-in-up" style={{
