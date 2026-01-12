@@ -12,8 +12,8 @@ export const WhatYouGet = () => {
   ];
 
   const afterCall = [
-    { icon: FileText, title: "One-page plan (PDF)", description: "with your exact scene, prompts, and schedule" },
-    { icon: Headphones, title: "Neville Daily Practice Kit", description: "PDF + 1 audio to keep you consistent" }
+    { icon: Lightbulb, title: "Focused insight", description: "A clearer understanding of what to work on first." },
+    { icon: Calendar, title: "A plan for the week ahead", description: "A straightforward way to move forward step-by-step." }
   ];
 
   return (
