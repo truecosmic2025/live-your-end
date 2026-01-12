@@ -7,23 +7,23 @@ export const WhyDifferent = () => {
   const differences = [
     {
       icon: Zap,
-      title: "Not another lecture",
-      description: "It's a working session—we build your scene and routine on the call."
+      title: "Not theory-heavy",
+      description: "We keep it simple and relevant to where you are right now."
     },
     {
       icon: Clock,
-      title: "Not woo for woo's sake",
-      description: "Short, repeatable behaviours. 5–10 mins nightly."
+      title: "Not overwhelming",
+      description: "Small actions you can realistically stick to."
     },
     {
       icon: Ban,
-      title: "Not salesy",
-      description: "If a program fits, we'll mention it. If not, you still leave with a plan."
+      title: "Not awkward or pushy",
+      description: "You'll be offered guidance only if you ask for it."
     },
     {
       icon: Lightbulb,
       title: "Low time, high clarity",
-      description: "Most clients report the feeling of \"Oh, I finally know exactly what to do.\""
+      description: "Most clients report the feeling of \"Oh, I finally know what to do now.\""
     }
   ];
 
@@ -60,7 +60,7 @@ export const WhyDifferent = () => {
 
         <div className="text-center">
           <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
-            Get Your Personal Plan — Free
+            Get Your Free Next-Step Session
           </CTAButton>
         </div>
       </div>
