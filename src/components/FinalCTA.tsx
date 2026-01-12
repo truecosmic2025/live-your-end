@@ -28,7 +28,7 @@ export const FinalCTA = () => {
 
             <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Book your <strong className="text-primary">free, no-pressure</strong> 30-minute session with Robert Meade 
-              and leave with a personalised action plan you can start tonight.
+              and leave with clarity and a plan for your next best step.
             </p>
 
             <CTAButton variant="primary" onClick={openChatbot} className="inline-flex max-w-full">
