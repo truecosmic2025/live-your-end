@@ -1,6 +1,29 @@
 // Utility function to open the BotPenguin chatbot
+// Additive: also opens the Claudde Bot widget by locating its shadow DOM
+// host and clicking the widget's own launcher/open button.
 export const openChatbot = () => {
   if (typeof window === 'undefined') return;
+
+  const tryOpenClaudde = () => {
+    try {
+      // The Claudde widget mounts a host element with a shadowRoot after its script loads.
+      // Find the host by scanning elements that have a shadowRoot (excluding our own app roots).
+      const hosts = Array.from(document.querySelectorAll('body *')).filter(
+        (el) => (el as HTMLElement).shadowRoot
+      ) as HTMLElement[];
+      for (const host of hosts) {
+        const root = host.shadowRoot!;
+        const launcher = root.querySelector(
+          'button, [role="button"], .claudde-launcher, [class*="launcher"], [class*="open"], [class*="bubble"], [class*="fab"]'
+        ) as HTMLElement | null;
+        if (launcher) {
+          launcher.click();
+          return true;
+        }
+      }
+    } catch {}
+    return false;
+  };
 
   const tryAPIs = () => {
     try { (window as any).BotPenguin?.open?.(); } catch {}
@@ -68,11 +91,14 @@ export const openChatbot = () => {
   const interval = 200;
 
   tryAPIs();
+  tryOpenClaudde();
+  let clauddeOpened = false;
   const timer = setInterval(() => {
     tryAPIs();
+    if (!clauddeOpened) clauddeOpened = tryOpenClaudde();
     const clicked = tryClickLauncher();
     const posted = tryPostMessage();
-    if (clicked || posted) {
+    if ((clicked || posted) && clauddeOpened) {
       clearInterval(timer);
     } else if (Date.now() - start > maxMs) {
       clearInterval(timer);
