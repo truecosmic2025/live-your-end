@@ -91,11 +91,14 @@ export const openChatbot = () => {
   const interval = 200;
 
   tryAPIs();
+  tryOpenClaudde();
+  let clauddeOpened = false;
   const timer = setInterval(() => {
     tryAPIs();
+    if (!clauddeOpened) clauddeOpened = tryOpenClaudde();
     const clicked = tryClickLauncher();
     const posted = tryPostMessage();
-    if (clicked || posted) {
+    if ((clicked || posted) && clauddeOpened) {
       clearInterval(timer);
     } else if (Date.now() - start > maxMs) {
       clearInterval(timer);
