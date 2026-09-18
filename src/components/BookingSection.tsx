@@ -1,32 +1,7 @@
-import { useEffect } from "react";
 import { GlassCard } from "./GlassCard";
 import { MessageSquare } from "lucide-react";
 
 export const BookingSection = () => {
-  useEffect(() => {
-    // Load BotPenguin chatbot script only if not already present
-    let added = false;
-    if (!document.getElementById("messenger-widget-b")) {
-      const script = document.createElement("script");
-      script.id = "messenger-widget-b";
-      script.src = "https://cdn.botpenguin.com/website-bot.js";
-      script.defer = true;
-      script.textContent = "6880c7ac63793209fdd9fbf7,6862add8833c9f93263e210e";
-      document.body.appendChild(script);
-      added = true;
-    }
-
-    return () => {
-      // Cleanup only if we added it here
-      if (added) {
-        const existingScript = document.getElementById("messenger-widget-b");
-        if (existingScript) {
-          document.body.removeChild(existingScript);
-        }
-      }
-    };
-  }, []);
-
   return (
     <section id="book" className="py-20 px-4">
       <div className="container max-w-4xl mx-auto">

@@ -1,7 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Clock, Lightbulb, Calendar, Award, FileText, Headphones } from "lucide-react";
-import { openChatbot } from "@/lib/chatbot";
+import { openBookingChat } from "@/lib/claudde";
 
 export const WhatYouGet = () => {
   const duringCall = [
@@ -72,7 +72,7 @@ export const WhatYouGet = () => {
         </GlassCard>
 
         <div className="text-center">
-          <CTAButton variant="primary" onClick={openChatbot} className="inline-flex">
+          <CTAButton variant="primary" onClick={openBookingChat} className="inline-flex">
             Claim Your Free Consultation
           </CTAButton>
         </div>

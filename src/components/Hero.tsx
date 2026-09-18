@@ -1,7 +1,7 @@
 import { GlassCard } from "./GlassCard";
 import { CTAButton } from "./CTAButton";
 import { Sparkles, CheckCircle } from "lucide-react";
-import { openChatbot } from "@/lib/chatbot";
+import { openBookingChat } from "@/lib/claudde";
 import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
@@ -59,10 +59,10 @@ export const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
-          <CTAButton variant="primary" onClick={openChatbot} className="w-full sm:w-auto sm:min-w-[280px] max-w-full">
+          <CTAButton variant="primary" onClick={openBookingChat} className="w-full sm:w-auto sm:min-w-[280px] max-w-full">
             Book Your Free 1:1 Session
           </CTAButton>
-          <CTAButton variant="glass" onClick={openChatbot} className="w-full sm:w-auto sm:min-w-[280px] max-w-full">
+          <CTAButton variant="glass" onClick={openBookingChat} className="w-full sm:w-auto sm:min-w-[280px] max-w-full">
             Watch Preview
           </CTAButton>
         </div>
